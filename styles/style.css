@@ -265,18 +265,12 @@
 
 .like-icon .main-body {
   fill: transparent;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon .core {
   fill: transparent;
-}
-
-.like-icon .core {
   transition: fill 0.3s linear;
-}
-
-.like-icon .main-body {
-  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:hover .core {
@@ -288,14 +282,6 @@
 } 
 
 /* нажатая кнопка */
-
-.like-icon .core {
-  transition: fill 0.3s linear;
-}
-
-.like-icon .main-body {
-  transition: fill 0.3s linear 0.05s;
-}
 
 .like-icon:active .core {
   fill: #FF0000;
@@ -323,7 +309,7 @@
   fill: #FF0000;
 }
 
-.like-icon.is-liked .heart{
+.like-icon.is-liked .heart {
   animation: scale 0.3s ease-in;
   transition: animation 0.1s;
 }
@@ -386,7 +372,7 @@
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
-.card__like-button::before{
+.card__like-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -409,7 +395,6 @@
 }
 
 .button-save {
-  display: block;
   max-width: 306px;
   display: flex;
   flex-direction: column;
@@ -545,7 +530,7 @@ dialog::backdrop {
     font-size: clamp(2.125rem, -1.5114rem + 18.1818vw, 2.75rem);
   }
   
-  .card{
+  .card {
     min-width: 320px;
   }
 }
