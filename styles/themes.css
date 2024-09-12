@@ -13,6 +13,12 @@
     --color-contour: black;
     --color-focus-focus-visible: #000000;
     --color-border-block: #000000;
+    --color-linear: #d3d3d3;
+    --color-linear-gradient-one: #e7e7e7;
+    --color-linear-gradient-two: #1a1a1a;
+    --color-core: #FF0000;
+    --color-main-body: #FF0000; 
+
 }
 
 :root.theme-dark {
@@ -25,6 +31,11 @@
     --color-contour: #00CC14;
     --color-focus-focus-visible: #00CC14;
     --color-border-block: #00CC14;
+    --color-linear: #000;
+    --color-linear-gradient-one: #007f0c;
+    --color-linear-gradient-two: #004306;
+    --color-core: #00CC14;
+    --color-main-body: #00CC14;
 }
 
 @media (prefers-color-scheme: light) {
@@ -36,6 +47,11 @@
         --color-contour: black;
         --color-focus-focus-visible: #000000;
         --color-border-block: #000000;
+        --color-linear: #d3d3d3;
+        --color-linear-gradient-one: #e7e7e7;
+        --color-linear-gradient-two: #1a1a1a;
+        --color-core: #FF0000;
+        --color-main-body: #FF0000;
     }
 }
 
@@ -50,6 +66,11 @@
         --color-contour: #00CC14;
         --color-focus-focus-visible: #00CC14;
         --color-border-block: #00CC14;
+        --color-linear: #000;
+        --color-linear-gradient-one: #007f0c;
+        --color-linear-gradient-two: #004306;
+        --color-core: #00CC14;
+        --color-main-body: #00CC14;
     }
 
 
