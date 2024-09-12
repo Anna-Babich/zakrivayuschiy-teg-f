@@ -17,8 +17,7 @@
     --color-linear-gradient-one: #e7e7e7;
     --color-linear-gradient-two: #1a1a1a;
     --color-core: #FF0000;
-    --color-main-body: #FF0000; 
-
+    --color-main-body: #FF0000;
 }
 
 :root.theme-dark {
