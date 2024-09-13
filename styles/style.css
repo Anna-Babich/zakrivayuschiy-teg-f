@@ -534,7 +534,7 @@ dialog::backdrop {
 
 @media (width <= 375px) {
   .header__logo {
-    font-size: clamp(2.125rem, -1.5114rem + 18.1818vw, 2.75rem);
+    font-size: clamp(2.875rem, -0.25rem + 14.2857vw, 3.0625rem);
   }
   
   .card {
