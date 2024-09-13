@@ -42,7 +42,7 @@
   margin-block-start: 100px;
   margin-block-end: 100px;
 
-  font-family: var(--font-family-accent), Arial, sans-serif;
+  font-family: var(--font-family-accent), fantasy, sans-serif;
   font-weight: var(--font-weight-text);
 
   border: 2px solid var(--color-border-block);
@@ -155,17 +155,13 @@
   margin-block-end: 5px;
 }
 
-.white-space {
-  white-space: nowrap;
-}
-
 .card__picture {
   position: relative;
   border: none;
 }
 
 .card__picture-label {
-  font-family: var(--font-family-accent), Arial, sans-serif;
+  font-family: var(--font-family-accent), fantasy, sans-serif;
   font-weight: var(--font-weight-text);
   font-size: 14px;
   position: absolute;
@@ -198,8 +194,12 @@
 }
 
 .contrast {
-  filter: contrast(50%);
+  filter: contrast(200%), saturate(100%);
 } 
+
+.brightness {
+  filter: brightness(105%);
+}
 
 .blur {
   filter: blur(5px);
@@ -210,7 +210,7 @@
 }
 
 .saturate {
-  filter: saturate(300%);
+  filter: saturate(200%);
 }
 
 .hue-rotate {
@@ -228,11 +228,12 @@
 .card__description {
   display: flex;
   flex-direction: column;
+  max-width: 646px;
   gap: 27px;
   font-size: var(--font-size);
   font-weight: var(--font-weight-text);
   line-height: 21px;
-  margin: 27px 25px 24px 25px;
+  margin: 23px 25px 24px 25px;
 }
 
 .card__group-btn {
@@ -288,21 +289,25 @@
 }
 
 .like-icon:hover .core {
-  fill: var(--color-core);
+  fill: var(--color-core-hover);
+  transition-delay: 0;
 } 
 
 .like-icon:hover .main-body {
-  fill: var(--color-main-body);
+  fill: var(--color-main-body-hover);
+  transition-delay: 0.03s;
 } 
 
 /* нажатая кнопка */
 
 .like-icon:active .core {
   fill: var(--color-core);
+  transition-delay: 0;
 } 
 
 .like-icon:active .main-body {
   fill: var(--color-main-body);
+  transition-delay: 0.03s;
 } 
 
 /* клик по кнопке */
@@ -319,7 +324,7 @@
 
 .like-icon.is-liked .contour {
   transition: fill 0.3s linear 0.06s;
-  fill: var(--color-contour);
+  fill: #FF0000;
 }
 
 .like-icon.is-liked .heart {
@@ -401,7 +406,7 @@
   position: relative;
   color: var(--button-color);
   mix-blend-mode: difference;
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-accent), fantasy, sans-serif;
   font-size: 14px;
   font-weight: var(--font-weight-text);
 }
@@ -434,11 +439,9 @@
 }
 
 dialog {
-  background-color: var(--background-color);
   min-width: 341px;
-  max-width: 353px;
-  max-height: 191px;
   border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
 }
 
 dialog::backdrop {
@@ -446,45 +449,40 @@ dialog::backdrop {
 }
 
 .dialog__content {
-  display: flex;
-  justify-content: center;
-  margin-block-start: 15px;
-  margin-block-end: 30px;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
-/* .button-save__floppy {
-  width: 28px;
-  height: 28px;
-  fill: currentColor;
-  color: var(--button-color);
-  mix-blend-mode: difference;
-  margin-block-end: 7px;
-} */
 .dialog__content-floppy {
   width: 39px;
   height: 39px;
-  display: inline;
-  margin-inline-end: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
   fill: currentColor;
   color: var(--button-color);
   mix-blend-mode: difference;
 }
 
 .dialog__content-text {
-  width: clamp(198px, 100%, 234px);
+  max-width: 198px;
   font-family: var(--font-family-accent), Arial, sans-serif;
   font-size: 14px;
   font-weight: var(--font-weight-text);
+  line-height: 21px;
+  text-transform: uppercase;
   color: var(--accent-color);
 }
 
 .dialog__close-btn {
   position: relative;
-  width: clamp(257px, 100%, 293px);
+  width: min(100%, 257px);
   display: block;
   min-height: 38px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .dialog__close-btn-text {
@@ -518,6 +516,20 @@ dialog::backdrop {
     margin-right: 5px;
     margin-top: 5px;
   }
+
+  dialog {
+    min-width: 353px;
+  }
+
+  .dialog__content {
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+
+  .dialog__close-btn {
+    width: min(100%, 293px);
+  }
+
 }
 
 @media (width <= 375px) {
